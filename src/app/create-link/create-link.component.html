@@ -1,0 +1,28 @@
+<h1 class="text-center">Shorten URL</h1>
+
+<hr>
+<br>
+<div class="contianer text-center">
+    <form [formGroup]="urlForm" (submit)="shortenURL()" class='form-group'>
+        <div class="row">
+            <div class="col-lg-6 p-3">
+                <b>URL to Shorten :</b>
+            </div>
+            <div class="col-lg-6 p-3">
+                <input type=text formControlName="longURL" class="form-control form-control-Over" />
+            </div>
+        </div>
+        <div class="class">
+            <div class="col-lg-12">
+                <button type="submit" [disabled]="!urlForm.valid" class='btn btn-primary btn-lg'>Shorten</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            {{errorMessage}}
+            <br>
+            {{shortURL}}
+        </div>
+    </div>
+</div>

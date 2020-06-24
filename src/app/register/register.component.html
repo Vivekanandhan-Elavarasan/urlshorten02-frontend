@@ -1,0 +1,36 @@
+<h1 class="text-center">Register</h1>
+
+<hr>
+<br>
+
+<div class="contianer text-center">
+    <form [formGroup]="registerForm" (submit)="register()" class='form-group'>
+        <div class="row">
+            <div class="col-lg-6 p-3">
+                <b>Email ID</b>
+            </div>
+            <div class="col-lg-6 p-3">
+                <input type=text formControlName="email" class="form-control form-control-Over" />
+                <small id="emailHelp" class="form-text text-muted form-control-Over">We'll never share your email with anyone else.</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 p-3">
+                <b>Password</b>
+            </div>
+            <div class="col-lg-6 p-3">
+                <input type="password" formControlName="pass" class="form-control form-control-Over" />
+            </div>
+        </div>
+        <div class="class">
+            <div class="col-lg-12">
+                <button type="submit"  class='btn btn-primary btn-lg' [disabled]="!registerForm.valid">Register</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            {{errorMessage}}
+        </div>
+    </div>
+</div>

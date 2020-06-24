@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="display: block;">
+                <canvas baseChart 
+                 datasets="barChartData"
+                  labels="barChartLabels"
+                  options="barChartOptions"
+                  plugins="barChartPlugins"
+                  legend="barChartLegend"
+                  chartType="barChartType"
+                  (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>              
+        </div>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-danger float-right" (click)="refresh()">Refresh</button>
+    </div>
+    <div *ngIf="selectedShortURL == ''" class="row">
+        <div class="col-lg-12">
+            Click on each Bar to view individual route.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <hr>
+            Selected URL : {{selectedLongURL}}
+            <br>
+            Shortened Version : {{selectedShortURL}}
+            <br>
+            Redirects : {{selectedClicks}}
+            <hr>
+        </div>
+    </div>
+</div>

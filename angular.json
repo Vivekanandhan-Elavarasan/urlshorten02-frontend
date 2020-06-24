@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "urlshorten02-frontend"
+    }
+  },
+  "defaultProject": "urlshorten02-frontend",
+  "cli": {
+    "analytics": "d7d745e7-2d17-48d8-b677-708e11aa9912"
+  }
 }
