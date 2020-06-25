@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
-  apiURL : "https://urlshorten-02.herokuapp.com"
+  production: false,
 };
 
 /*
